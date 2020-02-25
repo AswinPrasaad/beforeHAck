@@ -22,18 +22,18 @@
 
 			<th>Actions</th>
 		</tr>
-		<tr>
-			<%-- <td><c:out value="${obj.user.getId()}"/></td>  --%>
-			<td><c:out value="${viewById.userId}" /></td>
-			<td><c:out value="${viewById.userName}" /></td>
-			<td><c:out value="${viewById.address}" /></td>
-
-			<td>
-				<%-- <a href="edit?id=<c:out value='${obj.id}' />">Edit</a> --%> <!-- &nbsp;&nbsp;&nbsp;&nbsp; -->
-				<a href="delete?id=<c:out value='${viewById.userId}' />">Delete</a>
-			</td>
-
-		</tr>
+		<c:forEach var="obj" items="${viewList}"> 
+				<tr>
+				<%-- <td><c:out value="${obj.usergetId()}"/></td>  --%>
+					<td><c:out value="${obj.userId}"/></td>
+					<td><c:out value="${obj.userName}"/></td>
+					<td><c:out value="${obj.address}"/></td>
+					
+					<td><%-- <a href="edit?id=<c:out value='${obj.id}' />">Edit</a> --%>
+						<!-- &nbsp;&nbsp;&nbsp;&nbsp; --> <a
+						href="delete?id=<c:out value='${obj.userId}' />">Delete</a></td>
+				</tr>
+			 </c:forEach>
 	</table>
 </body>
 </html>

@@ -94,7 +94,7 @@ public class MainController {
 			
 		}
 	
-	/*@RequestMapping(value="/findByUserName/{name}" )
+	@RequestMapping(value="/findByUserName/{name}" )
 	   public ModelAndView findByUserName(@PathVariable("name")String name,@ModelAttribute("summa") User user,HttpServletRequest request){
 		
 	//String name=request.getParameter("names");
@@ -102,10 +102,10 @@ public class MainController {
 		System.out.println("hi");
 		List<User> l=ser.findByUserName(name);
 		
-			return new ModelAndView("after deletion","viewById",l);
+			return new ModelAndView("after deletion","viewList",l);
 			
 			
-		}*/
+		}
 	
 
 		
