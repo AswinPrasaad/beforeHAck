@@ -4,15 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 @Entity
+@Table(name = "users", schema = "team3") 
 public class User {
 
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	
 	private int userId;
 	@NotEmpty(message="Should not be empty")
 	private String userName;
@@ -54,7 +57,7 @@ public class User {
 		this.password = password;
 	}
 	
-
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub

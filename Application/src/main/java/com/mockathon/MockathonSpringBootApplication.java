@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-//@ComponentScan(basePackages = "com.mockathon")
+@ComponentScan(basePackages = "com.mockathon")
 
 public class MockathonSpringBootApplication {
 	public static void main(String[] args) {
